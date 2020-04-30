@@ -1,0 +1,13 @@
+note over selain:
+Kun käyttäjä on kirjoittanut uuden viestin ja painaa tallenna painiketta,
+lähettää selain POST pyynnön selaimelle. POST pyyntö sisältää valmiiksi JSON-muodossa
+oleven muistiinpanon.
+end note
+
+selain->palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+palvelin-->selain: Status Code 201 Created
+
+note over selain:
+Koska kyseessä on Single Page App versio, Palvelin ei lähetä 
+uudelleenohjaus pyyntöä selaimelle, vaan pysyy samalla sivulla.
+end note
