@@ -9,7 +9,7 @@ const App = () => {
     { name: 'Ada Lovelace', number: '39-44-5323523' },
     { name: 'Dan Abramov', number: '12-43-234345' },
     { name: 'Mary Poppendieck', number: '39-23-6423122' },
-    { name: 'Samuli Vento', number: '050-1234232' }
+    { name: 'Matti Meikäläinen', number: '050-1234232' }
   ])
   const [newName, setNewName] = useState('')
   const [newNumber, setNewNumber] = useState('')
