@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Persons = ({ persons, newSearch }) => {
+const Persons = ({ persons, newSearch, deletePerson }) => {
     let filteredList = []
-    if(newSearch === '') {
+    if (newSearch === '') {
         filteredList = persons.concat()
     } else {
         persons.forEach(filteredPerson => {
-            if(filteredPerson.name.toUpperCase().includes(newSearch.toUpperCase())) {
+            if (filteredPerson.name.toUpperCase().includes(newSearch.toUpperCase())) {
                 filteredList.push(filteredPerson)
             }
         })
@@ -14,13 +14,12 @@ const Persons = ({ persons, newSearch }) => {
 
     return (
         <div>
-
-            {filteredList.map(person =>
-                <li key={person.id}>
-                    {person.name} {person.number}
-                </li>
-            )}
-
+            {filteredList.map((person, i) => 
+                <li key={i}>
+                    {person.name} {person.number} 
+                    <button onClick={() => 
+                        deletePerson(person)}>delete</button>
+                </li>)}
         </div>
     )
 }
